@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日投資與趨勢快報</title>
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666;
+      --up: #10b981;
+      --down: #ef4444;
+      --accent: #3b82f6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --card: #1e293b;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+      }
+    }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; max-width: 960px; margin: 0 auto; padding: 16px; line-height: 1.6; background: var(--bg); color: var(--text); }
+    h1 { font-size: 1.8rem; margin-bottom: 4px; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .kpi-card { background: var(--card); padding: 16px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .kpi-card .name { font-weight: 600; }
+    .kpi-card .price { font-size: 1.4rem; font-weight: 700; margin: 4px 0; }
+    .kpi-card .change { font-size: 0.95rem; }
+    .up { color: var(--up); }
+    .down { color: var(--down); }
+    .section { background: var(--card); padding: 20px; margin: 16px 0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid var(--accent); }
+    .section h2 { margin-top: 0; font-size: 1.3rem; }
+    ul { padding-left: 20px; }
+    li { margin: 6px 0; }
+    @media (max-width: 600px) {
+      .kpi-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <h1>每日投資與趨勢快報</h1>
+  <p class="meta">最後更新：每日平日 16:00 · 台北時間 · 資料來自公開市場與摘要</p>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="name">00662 富邦NASDAQ</div>
+      <div class="price">--</div>
+      <div class="change">等待數據</div>
+    </div>
+    <div class="kpi-card">
+      <div class="name">00631L 台灣50正2</div>
+      <div class="price">--</div>
+      <div class="change">等待數據</div>
+    </div>
+    <div class="kpi-card">
+      <div class="name">加權指數</div>
+      <div class="price">--</div>
+      <div class="change">等待數據</div>
+    </div>
+    <div class="kpi-card">
+      <div class="name">台幣匯率</div>
+      <div class="price">--</div>
+      <div class="change">USD/TWD</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>今日快報</h2>
+    <div id="latest-report">
+      <p>等待第一份每日報告…</p>
+      <p>將含：投資核心 · 宏觀與資金成本 · AI／高科技趨勢</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>歷史記錄</h2>
+    <ul id="history-list">
+      <li>尚無歷史報告</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>未來關鍵行程（市場相關）</h2>
+    <ul>
+      <li><strong>2026-12-09</strong> — FOMC 利率決策（含經濟預測與點陣圖）</li>
+      <li><strong>2026-12-25</strong> — 台股休市（行憲紀念日）</li>
+      <li><strong>2027-02-01</strong> — 台股封關（預估）</li>
+      <li><strong>2027-02-04 ~ 02-10</strong> — 春節休市期間</li>
+      <li><strong>2027-01-27</strong> — 下次 FOMC 決策</li>
+    </ul>
+    <p style="color:var(--muted); font-size:0.85rem;">僅市場相關重要日期，不含個人日曆。</p>
+  </div>
+</body>
+</html>
